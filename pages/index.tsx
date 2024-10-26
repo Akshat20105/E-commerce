@@ -101,7 +101,7 @@ export default function Home() {
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 <Package2 className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-2xl font-bold text-blue-800">PMS</span>
+                <span className="ml-2 text-2xl font-bold text-blue-800">GIVA</span>
               </div>
             </div>
           </div>
