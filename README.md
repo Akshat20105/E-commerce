@@ -58,7 +58,7 @@ Before you begin, ensure you have met the following requirements:
    ```
    in my case it is
    ```
-   DATABASE_URL=postgresql://postgres:ar20105@localhost:5432/e_com   
+   DATABASE_URL=postgresql://postgres:passwd@localhost:5432/e_com   
    ```
 
 5. Run the development server:
