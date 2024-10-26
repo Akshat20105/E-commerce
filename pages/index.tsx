@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react'
 import ProductList from '../components/ProductList'
 import ProductForm from '../components/ProductForm'
-import { Button } from "../components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Package2 } from 'lucide-react'
+import { Product, NewProduct } from '@/types/product'
 
 export default function Home() {
-  const [products, setProducts] = useState([])
-  const [editingProduct, setEditingProduct] = useState(null)
+  const [products, setProducts] = useState<Product[]>([])
+  const [editingProduct, setEditingProduct] = useState<Product | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)
   const [isFormVisible, setIsFormVisible] = useState(false)
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function Home() {
     }
   }
 
-  const handleAddProduct = async (product) => {
+  const handleAddProduct = async (product: NewProduct) => {
     try {
       const response = await fetch('/api/products', {
         method: 'POST',
@@ -51,7 +52,7 @@ export default function Home() {
     }
   }
 
-  const handleUpdateProduct = async (product) => {
+  const handleUpdateProduct = async (product: Product) => {
     try {
       const response = await fetch(`/api/products/${product.id}`, {
         method: 'PUT',
@@ -70,7 +71,7 @@ export default function Home() {
     }
   }
 
-  const handleDeleteProduct = async (id) => {
+  const handleDeleteProduct = async (id: number) => {
     try {
       const response = await fetch(`/api/products/${id}`, { method: 'DELETE' })
       if (!response.ok) {
@@ -80,6 +81,14 @@ export default function Home() {
     } catch (err) {
       setError('Failed to delete product. Please try again.')
       console.error('Error deleting product:', err)
+    }
+  }
+
+  const handleSubmit = (product: NewProduct) => {
+    if (editingProduct) {
+      handleUpdateProduct({ ...product, id: editingProduct.id })
+    } else {
+      handleAddProduct(product)
     }
   }
 
@@ -117,7 +126,7 @@ export default function Home() {
                     {editingProduct ? 'Edit Product' : 'Add New Product'}
                   </h3>
                   <ProductForm 
-                    onSubmit={editingProduct ? handleUpdateProduct : handleAddProduct} 
+                    onSubmit={handleSubmit}
                     initialData={editingProduct} 
                   />
                 </div>

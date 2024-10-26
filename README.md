@@ -101,4 +101,4 @@ This project follows these key principles:
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/Akshat20105/E-commerce.git/issues) if you want to contribute.
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/Akshat20105/E-commerce/issues) if you want to contribute.
