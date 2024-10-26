@@ -30,7 +30,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/product-management-system.git
+   git clone https://github.com/Akshat20105/E-commerce.git
    cd product-management-system
    ```
 
@@ -55,6 +55,10 @@ Before you begin, ensure you have met the following requirements:
 4. Create a `.env.local` file in the root directory and add your database connection string:
    ```
    DATABASE_URL=postgresql://username:password@localhost:5432/your_database_name
+   ```
+   in my case it is
+   ```
+   DATABASE_URL=postgresql://postgres:ar20105@localhost:5432/e_com   
    ```
 
 5. Run the development server:
@@ -97,8 +101,4 @@ This project follows these key principles:
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/your-username/product-management-system/issues) if you want to contribute.
-
-## License
-
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/Akshat20105/E-commerce.git/issues) if you want to contribute.
