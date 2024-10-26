@@ -41,7 +41,7 @@ export default function ProductForm({ onSubmit, initialData }: ProductFormProps)
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="name">Product Name</Label>
+          <Label htmlFor="name" className="text-blue-800">Product Name</Label>
           <Input
             id="name"
             type="text"
@@ -50,10 +50,11 @@ export default function ProductForm({ onSubmit, initialData }: ProductFormProps)
             onChange={handleChange}
             placeholder="Enter product name"
             required
+            className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="price">Price</Label>
+          <Label htmlFor="price" className="text-blue-800">Price</Label>
           <Input
             id="price"
             type="number"
@@ -63,11 +64,12 @@ export default function ProductForm({ onSubmit, initialData }: ProductFormProps)
             placeholder="Enter price"
             step="0.01"
             required
+            className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
           />
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="description">Description</Label>
+        <Label htmlFor="description" className="text-blue-800">Description</Label>
         <Textarea
           id="description"
           name="description"
@@ -75,10 +77,11 @@ export default function ProductForm({ onSubmit, initialData }: ProductFormProps)
           onChange={handleChange}
           placeholder="Enter product description"
           required
+          className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="quantity">Quantity</Label>
+        <Label htmlFor="quantity" className="text-blue-800">Quantity</Label>
         <Input
           id="quantity"
           type="number"
@@ -87,9 +90,10 @@ export default function ProductForm({ onSubmit, initialData }: ProductFormProps)
           onChange={handleChange}
           placeholder="Enter quantity"
           required
+          className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
         />
       </div>
-      <Button type="submit" className="w-full">
+      <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
         {initialData ? 'Update' : 'Add'} Product
       </Button>
     </form>
