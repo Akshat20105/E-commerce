@@ -1,8 +1,7 @@
 # Product Management System 
 Checkout the website here,
 
-
-https://givaecommerce-kof5cr8gb-akshat20105s-projects.vercel.app/
+https://givaecommerce.vercel.app/
 or here,
 https://ecom-giva.netlify.app/
 
