@@ -62,11 +62,6 @@ Before you begin, ensure you have met the following requirements:
    ```
    DATABASE_URL=postgresql://username:password@localhost:5432/your_database_name
    ```
-   I have created a database on subabase, therefore in my case it is
-   ```
-   DATABASE_URL=postgresql://postgres.cdkwyjbukrfauindibpg:aeV4j27Ik8aAZaZT@aws-0-ap-south-1.pooler.supabase.com:6543/postgres 
-  
-   ```
 
 5. Run the development server:
    ```
